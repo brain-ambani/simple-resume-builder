@@ -1,3 +1,4 @@
+import Navbar from "../components/Navbar";
 import { getServerSession } from "next-auth";
 import { ReactNode } from "react";
 import { authOptions } from "../utils/auth";
@@ -13,5 +14,12 @@ export default async function HomeLayout({
   if (!session) {
     return redirect("/login");
   }
-  return <div>{children}</div>;
+  return (
+    <>
+      <Navbar />
+      <main className="w-full max-w-7xl mx-auto sm:px-6 lg:px-8">
+        {children}
+      </main>
+    </>
+  );
 }

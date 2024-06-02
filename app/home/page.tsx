@@ -1,9 +1,9 @@
-import Navbar from "../components/Navbar";
+import MovieVideo from "../components/MovieVideo";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
+      <MovieVideo />
     </div>
   );
 }
